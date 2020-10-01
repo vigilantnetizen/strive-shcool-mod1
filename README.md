@@ -1,0 +1,1 @@
+# strive-shcool-mod1
