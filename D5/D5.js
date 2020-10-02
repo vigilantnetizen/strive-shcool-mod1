@@ -15,43 +15,101 @@
    Create a variable test that contains a string
 */
 
+const test = "I am String with double quotes";
+
+console.log(test);
+
 /* Ex.B
     Create a variable sum that contains the result of the sum between 10 and 20 
 */
+
+const mySum = 10 + 20;
+console.log(mySum);
 
 /* Ex.C 
     Create a variable random that contains a random number between 0 and 20 (should be randomly created at each execution)
 */
 
+const randomNumbers = Math.floor(Math.random() * 20);
+
+console.log(randomNumbers);
+
 /* Ex.D
     Create a variable Me containing and object with the current information: Name = Your Name, Surname = Your Surname, Age = Your Age
 */
+
+const thisIsme = {
+  Same: "Michael",
+  Surname: "Jackson",
+  Age: 30,
+};
+
+console.log(thisIsme);
 
 /* Ex.E 
     Programmatically remove the Age from the previously create object Me
 */
 
+delete thisIsme.Age;
+
+console.log(thisIsme);
+
 /* Ex.F 
    Programmatically add to the object Me an array "skills" that contains the programming languages that you know
 */
 
+const arrayOfskills = ["html", "javascript", "css"];
+
 /* Ex.G 
    Programmatically remove the last skill from the array "skills" inside of the "me" object
 */
+
+delete arrayOfskills[2];
+
+console.log(arrayOfskills);
 
 // JS Functions
 /* Ex.1
     Write the function Dice that randomize an integer number between 1 and 6
 */
 
+function Dice() {
+  return Math.floor(Math.random() * 6 + 1);
+}
+console.log(Dice());
+
 /* Ex.2 
     Write the function WhoIsBigger that receives 2 numbers and returns the bigger of the 2
 */
+
+function WhoIsBigger(x, y) {
+  if (x >= 40 && x <= 60 && y >= 40 && y <= 60) {
+    if (x === y) {
+      return "Numbers are the same";
+    } else if (x > y) {
+      return x;
+    } else {
+      return y;
+    }
+  }
+}
+
+console.log(WhoIsBigger(40, 20));
 
 /* Ex.3
     Write the function SplitMe that receives a String and returns an array with every word in that string
     Ex. SplitMe("I love coding") => returns [ "I","Love","Coding"]
 */
+
+const SplitMe = "I Love coding";
+
+//console.log(typeof SplitMe);
+
+//const arr = SplitMe.split(",");
+
+const SplitMeArray = SplitMe.split(" ");
+
+console.log(SplitMeArray);
 
 /* Ex.4
     Write the function DeleteOne that receives a string and a boolean. If the boolean is true, should return the string without the first letter, otherwise should remove the last one
